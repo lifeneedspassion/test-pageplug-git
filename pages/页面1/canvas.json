@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 59,
+          "version": 60,
           "minHeight": 900,
           "parentColumnSpace": 1,
           "dynamicTriggerPathList": [],
@@ -52,6 +52,28 @@
                       "labelTextSize": "0.875rem",
                       "label": "Revenue"
                     },
+                    "title": {
+                      "children": {},
+                      "dataType": "string",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.title))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "fieldType": "Text Input",
+                      "sourceData": "Mortal Kombat",
+                      "isCustomField": false,
+                      "accessor": "title",
+                      "identifier": "title",
+                      "position": 1,
+                      "originalIdentifier": "title",
+                      "boxShadow": "none",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "iconAlign": "left",
+                      "isDisabled": false,
+                      "isRequired": false,
+                      "isSpellCheck": false,
+                      "isVisible": true,
+                      "labelTextSize": "0.875rem",
+                      "label": "Title"
+                    },
                     "imdb_id": {
                       "children": {},
                       "dataType": "string",
@@ -61,7 +83,7 @@
                       "isCustomField": false,
                       "accessor": "imdb_id",
                       "identifier": "imdb_id",
-                      "position": 1,
+                      "position": 2,
                       "originalIdentifier": "imdb_id",
                       "boxShadow": "none",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -83,7 +105,7 @@
                       "isCustomField": false,
                       "accessor": "release_date",
                       "identifier": "release_date",
-                      "position": 2,
+                      "position": 3,
                       "originalIdentifier": "release_date",
                       "boxShadow": "none",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -190,7 +212,7 @@
                       "isCustomField": false,
                       "accessor": "genres",
                       "identifier": "genres",
-                      "position": 3,
+                      "position": 4,
                       "originalIdentifier": "genres",
                       "boxShadow": "none",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -214,7 +236,7 @@
                       "isCustomField": false,
                       "accessor": "vote_average",
                       "identifier": "vote_average",
-                      "position": 4,
+                      "position": 5,
                       "originalIdentifier": "vote_average",
                       "boxShadow": "none",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -236,7 +258,7 @@
                       "isCustomField": false,
                       "accessor": "tagline",
                       "identifier": "tagline",
-                      "position": 5,
+                      "position": 6,
                       "originalIdentifier": "tagline",
                       "boxShadow": "none",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -248,28 +270,6 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Tagline"
-                    },
-                    "title": {
-                      "children": {},
-                      "dataType": "string",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.title))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-                      "fieldType": "Text Input",
-                      "sourceData": "Mortal Kombat",
-                      "isCustomField": false,
-                      "accessor": "title",
-                      "identifier": "title",
-                      "position": 6,
-                      "originalIdentifier": "title",
-                      "boxShadow": "none",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "iconAlign": "left",
-                      "isDisabled": false,
-                      "isRequired": false,
-                      "isSpellCheck": false,
-                      "isVisible": true,
-                      "labelTextSize": "0.875rem",
-                      "label": "Title"
                     },
                     "vote_count": {
                       "children": {},
@@ -395,8 +395,8 @@
                   "position": -1,
                   "originalIdentifier": "__root_schema__",
                   "boxShadow": "none",
-                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                  "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                  "cellBorderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
                   "cellBoxShadow": "none",
                   "isDisabled": false,
                   "isRequired": false,
@@ -499,6 +499,15 @@
                   "key": "schema.__root_schema__.children.revenue.accentColor"
                 },
                 {
+                  "key": "schema.__root_schema__.children.title.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.title.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.title.accentColor"
+                },
+                {
                   "key": "schema.__root_schema__.children.imdb_id.defaultValue"
                 },
                 {
@@ -563,15 +572,6 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.tagline.accentColor"
-                },
-                {
-                  "key": "schema.__root_schema__.children.title.defaultValue"
-                },
-                {
-                  "key": "schema.__root_schema__.children.title.borderRadius"
-                },
-                {
-                  "key": "schema.__root_schema__.children.title.accentColor"
                 },
                 {
                   "key": "schema.__root_schema__.children.vote_count.defaultValue"
@@ -763,7 +763,7 @@
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "widgetName": "data_table",
-                      "onSort": "{{FindQuery.run()}}",
+                      "onSort": "{{showAlert()}}",
                       "columnOrder": [
                         "revenue",
                         "imdb_id",
@@ -1892,24 +1892,8 @@
             }
           ]
         ],
-        "widgetNames": [
-          "Alert_text",
-          "Button1",
-          "Canvas1",
-          "Canvas3",
-          "Canvas4",
-          "Container1",
-          "Delete_Button",
-          "Delete_Modal",
-          "Insert_Modal",
-          "MainContainer",
-          "Text12",
-          "Text16",
-          "add_btn",
-          "data_table",
-          "insert_form",
-          "refresh_btn",
-          "update_form"
+        "mongoEscapedWidgetNames": [
+          "data_table"
         ],
         "validOnPageLoadActions": true,
         "id": "页面1",
@@ -1922,6 +1906,5 @@
     "policies": []
   },
   "deleted": false,
-  "policies": [],
   "gitSyncId": "62ac541f849f985dc26f144c_62cbe0afec1e964295b29230"
 }

@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1290,
+          "bottomRow": 1400,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 59,
+          "version": 60,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -100,7 +100,7 @@
               "isDisabled": false,
               "key": "kibw6voqmi",
               "isDeprecated": false,
-              "rightColumn": 42,
+              "rightColumn": 46,
               "isDefaultClickDisabled": true,
               "widgetId": "7r14djmilw",
               "isVisible": true,
@@ -139,7 +139,7 @@
               "key": "fxgf67nz42",
               "isRequired": false,
               "isDeprecated": false,
-              "rightColumn": 15,
+              "rightColumn": 21,
               "widgetId": "h11ml0mpzq",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
@@ -590,23 +590,7 @@
               },
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "List1",
-              "listData": [
-                {
-                  "id": "001",
-                  "name": "Blue",
-                  "img": "https://assets.appsmith.com/widgets/default.png"
-                },
-                {
-                  "id": "002",
-                  "name": "Green",
-                  "img": "https://assets.appsmith.com/widgets/default.png"
-                },
-                {
-                  "id": "003",
-                  "name": "Red",
-                  "img": "https://assets.appsmith.com/widgets/default.png"
-                }
-              ],
+              "listData": "[\n  {\n    \"id\": \"001\",\n    \"name\": \"Blue\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"002\",\n    \"name\": \"Green\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"003\",\n    \"name\": \"Red\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  }\n]",
               "isCanvas": true,
               "displayName": "List",
               "iconSVG": "/static/media/icon.9925ee17.svg",
@@ -1056,30 +1040,45 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "widgetName": "Iframe1",
+              "displayName": "Iframe",
+              "iconSVG": "/static/media/icon.34169b6a.svg",
+              "topRow": 101,
+              "bottomRow": 138,
+              "parentRowSpace": 10,
+              "source": "https://www.example.com",
+              "type": "IFRAME_WIDGET",
+              "hideCard": false,
+              "borderOpacity": 100,
+              "animateLoading": true,
+              "parentColumnSpace": 20.0625,
+              "leftColumn": 31,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                }
+              ],
+              "borderWidth": 1,
+              "key": "jrmti3qz5t",
+              "isDeprecated": false,
+              "rightColumn": 63,
+              "widgetId": "0k4l0ln981",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
             }
           ]
         },
         "layoutOnLoadActions": [],
-        "widgetNames": [
-          "Button1",
-          "ButtonGroup1",
-          "Canvas1",
-          "Canvas2",
-          "Canvas3",
-          "Checkbox1",
-          "Checkbox2",
-          "Checkbox3",
-          "Container1",
-          "Container2",
-          "IconButton1",
-          "Image1",
-          "Image2",
-          "List1",
-          "MainContainer",
-          "Text1",
-          "Text2",
-          "formily1"
-        ],
         "validOnPageLoadActions": true,
         "id": "Page1",
         "deleted": false,
@@ -1091,6 +1090,5 @@
     "policies": []
   },
   "deleted": false,
-  "policies": [],
   "gitSyncId": "62ac541f849f985dc26f144c_62ac541f849f985dc26f144e"
 }
